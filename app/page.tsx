@@ -1,3 +1,4 @@
+import Image from "next/image";
 import RevealText from "./components/RevealText";
 
 export default function Home() {
@@ -23,13 +24,16 @@ export default function Home() {
             </h1>
           </div>
           <div className="h-[50%] mx-6 mb-6 flex gap-6">
-            <div className="w-[25%] border-2 border-foreground"></div>
+            <div className="w-[25%] border-2 border-foreground">
+              <Image className="w-20" src="/images/companion.png" width={500} height={500} alt="Message bubble" />
+            </div>
             <div id="pic-container" className="w-[25%] border-2 border-foreground relative flex flex-row-reverse justify-between">
               <div className="w-24 h-fit m-6 p-2 relative bg-white border-2 border-foreground">
-                <p className="text-center leading-[1.25]">Here I am! With the nerd glasses!</p>
+                <p className="text-center leading-[1.25]">This is me. With my nerd glasses!</p>
               </div>
-              <div className="w-24 h-fit m-6 p-2 relative bg-white border-2 border-foreground">
-                <p className="text-center leading-[1.25]">Here I am! With the nerd glasses!</p>
+              <div className="w-28 m-10 h-fit relative">
+                <Image className="w-full absolute" src="/images/bubbles.png" width={500} height={500} alt="Message bubble" />
+                <p className="w-20 mx-3 my-[2.1rem] relative text-center leading-[1.25]">I am hungry...</p>
               </div>
             </div>
             <div className="w-[50%] flex flex-row-reverse justify-between border-2 border-foreground bg-cover bg-center" style={{ backgroundImage: "url('images/map.png')" }}>
