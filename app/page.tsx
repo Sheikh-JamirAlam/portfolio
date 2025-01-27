@@ -1,8 +1,9 @@
-import Image from "next/image";
 import RevealText from "./components/RevealText";
 import SocialsContainer from "./components/SocialsContainer";
 import PicContainer from "./components/PicContainer";
 import OpenAnimation from "./components/OpenAnimation";
+import CompanionAnimation from "./components/CompanionAnimation";
+import SocialsTextBubble from "./components/SocialsTextBubble";
 
 export default function Home() {
   return (
@@ -38,13 +39,8 @@ export default function Home() {
             </div>
             <PicContainer />
             <div className="w-[25%] flex border-2 border-foreground overflow-hidden">
-              <div className="w-14 h-20 mt-auto mb-6 relative">
-                <Image className="w-24 scale-150 absolute rotate-[20deg] -translate-x-1" src="/images/companion.png" width={500} height={500} alt="Message bubble" />
-              </div>
-              <div className="w-36 h-[17rem] mt-auto relative">
-                <Image className="w-36 scale-150 absolute" src="/images/bubble-socials.png" width={500} height={500} alt="Message bubble" />
-                <p className="w-28 mx-auto text-center relative">These are his socials... Who am I? Eh... just here to narrate some stuff... No I don&apos;t get paid.</p>
-              </div>
+              <CompanionAnimation />
+              <SocialsTextBubble />
               <SocialsContainer />
             </div>
           </div>
