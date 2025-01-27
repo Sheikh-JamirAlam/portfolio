@@ -1,5 +1,6 @@
 import Image from "next/image";
 import RevealText from "./components/RevealText";
+import { Email, Github, Linkedin, Twitter } from "./components/Icons";
 
 export default function Home() {
   return (
@@ -24,8 +25,20 @@ export default function Home() {
             </h1>
           </div>
           <div className="h-[50%] mx-6 mb-6 flex gap-6">
-            <div className="w-[25%] border-2 border-foreground">
-              <Image className="w-20" src="/images/companion.png" width={500} height={500} alt="Message bubble" />
+            <div className="w-[25%] flex border-2 border-foreground overflow-hidden">
+              <div className="w-14 h-20 mt-auto mb-6 relative">
+                <Image className="w-24 scale-150 absolute rotate-[20deg] -translate-x-1" src="/images/companion.png" width={500} height={500} alt="Message bubble" />
+              </div>
+              <div className="w-36 h-[17rem] mt-auto relative">
+                <Image className="w-36 scale-150 absolute" src="/images/bubble-socials.png" width={500} height={500} alt="Message bubble" />
+                <p className="w-28 mx-auto text-center relative">These are his socials... Who am I? Eh... just here to narrate some stuff... No I don&apos;t get paid.</p>
+              </div>
+              <div className="mx-auto my-auto grid grid-cols-2 gap-6 text-7xl">
+                <Email className="saturate-0" />
+                <Github className="saturate-0" />
+                <Linkedin className="saturate-0" />
+                <Twitter className="saturate-0" />
+              </div>
             </div>
             <div id="pic-container" className="w-[25%] border-2 border-foreground relative flex flex-row-reverse justify-between">
               <div className="w-24 h-fit m-6 p-2 relative bg-white border-2 border-foreground">
@@ -33,7 +46,7 @@ export default function Home() {
               </div>
               <div className="w-28 m-10 h-fit relative">
                 <Image className="w-full absolute" src="/images/bubbles.png" width={500} height={500} alt="Message bubble" />
-                <p className="w-20 mx-3 my-[2.1rem] relative text-center leading-[1.25]">I am hungry...</p>
+                <p className="w-20 mx-3 my-[2.1rem] relative text-center leading-[1.25]">I am so hungry...</p>
               </div>
             </div>
             <div className="w-[50%] flex flex-row-reverse justify-between border-2 border-foreground bg-cover bg-center" style={{ backgroundImage: "url('images/map.png')" }}>
