@@ -9,7 +9,7 @@ export default function RevealText({ text }: { text: string }) {
   const isInView = useInView(scope, { once: true });
 
   useEffect(() => {
-    if (isInView) animate([["span", { transform: "translateY(0)" }, { duration: 0.4, ease: [0.33, 1, 0.68, 1], delay: stagger(0.02) }]]);
+    if (isInView) animate([["span", { transform: "translateY(0)" }, { duration: 0.4, ease: [0.33, 1, 0.68, 1], delay: stagger(0.02, { startDelay: 0.4 }) }]]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInView]);
 
