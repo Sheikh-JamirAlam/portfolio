@@ -4,6 +4,7 @@ import PicContainer from "./components/PicContainer";
 import OpenAnimation from "./components/OpenAnimation";
 import CompanionAnimation from "./components/CompanionAnimation";
 import SocialsTextBubble from "./components/SocialsTextBubble";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -42,6 +43,47 @@ export default function Home() {
               <CompanionAnimation />
               <SocialsTextBubble />
               <SocialsContainer />
+            </div>
+          </div>
+        </section>
+        <section className="mb-6 mx-6 flex flex-col gap-6">
+          <div className="flex gap-6">
+            <div className="w-[50%] relative border-2 border-foreground">
+              <Image className="saturate-0 select-none" src="/images/cipela.png" width={1000} height={1000} alt="Cipela - Shoe website" />
+              <div className="absolute inset-0">
+                <div className="w-fit mt-12 m-4 p-2 relative bg-white border-2 border-foreground cursor-pointer">
+                  <p className="w-[8rem] text-center">Another portfolio project is Cipela, which is a shoe selling website inspired by Nike.</p>
+                </div>
+              </div>
+            </div>
+            <div className="w-[50%] relative border-2 border-foreground">
+              <Image className="saturate-0 select-none" src="/images/opods.png" width={1000} height={1000} alt="OPods - Airpods website" />
+              <div className="flex flex-row-reverse justify-between absolute inset-0">
+                <div className="w-fit h-fit mt-12 m-4 p-2 relative bg-white border-2 border-foreground cursor-pointer">
+                  <p className="w-[9rem] text-center">Let&apos;s me show you some of my works...</p>
+                </div>
+                <div className="w-fit h-fit mt-auto mb-[20%] m-4 p-2 relative bg-white border-2 border-foreground cursor-pointer">
+                  <p className="w-[13rem] text-center">OPods is a portfolio project which is a product showcase website inspired by Apple.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex gap-6">
+            <div className="w-[50%] relative border-2 border-foreground">
+              <Image className="saturate-0 select-none" src="/images/medisearch.png" width={1000} height={1000} alt="Medisearch - Redesign of Medisearch website" />
+              <div className="absolute inset-0">
+                <div className="w-fit mt-12 m-4 p-2 relative bg-white border-2 border-foreground cursor-pointer">
+                  <p className="w-[12.5rem] text-center">Lastly this is a Fullstack project, redesign of Medisearch website with authentication functionality.</p>
+                </div>
+              </div>
+            </div>
+            <div className="w-[50%] relative border-2 border-foreground">
+              <Image className="saturate-0 select-none" src="/images/healthtech.png" width={1000} height={1000} alt="Healthtech - Redesign of Healthtech website" />
+              <div className="flex justify-end items-end absolute inset-0">
+                <div className="w-fit h-fit mb-12 m-4 p-2 relative bg-white border-2 border-foreground cursor-pointer">
+                  <p className="w-[9rem] text-center">This was a personal redesign of the website Healthtech.</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
