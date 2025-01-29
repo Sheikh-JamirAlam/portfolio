@@ -12,8 +12,14 @@ export default function CipelaContainer() {
   useEffect(() => {
     if (!videoRef || !videoRef.current) return;
 
-    if (isHovered) videoRef.current.play();
-    else videoRef.current.pause();
+    if (videoRef.current) {
+      if (isHovered) {
+        videoRef.current.currentTime = 0;
+        videoRef.current.play();
+      } else {
+        videoRef.current.pause();
+      }
+    }
   }, [isHovered]);
 
   return (
@@ -25,10 +31,12 @@ export default function CipelaContainer() {
         height={1000}
         alt="Cipela - Shoe website"
       />
-      {isHovered && <video ref={videoRef} className="absolute inset-0" src="/videos/cipela.mp4" autoPlay loop muted preload="none" aria-label="A video of showcasing OPods" />}
+      <video ref={videoRef} className="absolute inset-0 z-10" src="/videos/cipela.mp4" autoPlay loop muted preload="none" aria-label="A video of showcasing OPods" />
       <div ref={constraintsRef} className="absolute z-30 inset-0">
         <motion.div drag dragConstraints={constraintsRef} dragElastic={0} dragMomentum={false} className="w-fit mt-12 m-4 p-2 relative bg-white border-2 border-foreground cursor-pointer">
-          <p className="w-[8rem] text-center">Another portfolio project is Cipela, which is a shoe selling website inspired by Nike.</p>
+          <p className="w-[8rem] text-center">
+            Another portfolio project is <span className="font-semibold">Cipela</span>, which is a shoe selling website inspired by Nike.
+          </p>
         </motion.div>
       </div>
     </motion.div>
