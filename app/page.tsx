@@ -1,10 +1,11 @@
+import Image from "next/image";
 import RevealText from "./components/RevealText";
 import SocialsContainer from "./components/SocialsContainer";
 import PicContainer from "./components/PicContainer";
 import OpenAnimation from "./components/OpenAnimation";
 import CompanionAnimation from "./components/CompanionAnimation";
 import SocialsTextBubble from "./components/SocialsTextBubble";
-import Image from "next/image";
+import CipelaContainer from "./components/CipelaContainer";
 
 export default function Home() {
   return (
@@ -48,14 +49,7 @@ export default function Home() {
         </section>
         <section className="mb-6 mx-6 flex flex-col gap-6">
           <div className="flex gap-6">
-            <div className="w-[50%] relative border-2 border-foreground">
-              <Image className="saturate-0 select-none" src="/images/cipela.png" width={1000} height={1000} alt="Cipela - Shoe website" />
-              <div className="absolute inset-0">
-                <div className="w-fit mt-12 m-4 p-2 relative bg-white border-2 border-foreground cursor-pointer">
-                  <p className="w-[8rem] text-center">Another portfolio project is Cipela, which is a shoe selling website inspired by Nike.</p>
-                </div>
-              </div>
-            </div>
+            <CipelaContainer />
             <div className="w-[50%] relative border-2 border-foreground">
               <Image className="saturate-0 select-none" src="/images/opods.png" width={1000} height={1000} alt="OPods - Airpods website" />
               <div className="flex flex-row-reverse justify-between absolute inset-0">
