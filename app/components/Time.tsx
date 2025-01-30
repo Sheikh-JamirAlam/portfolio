@@ -9,9 +9,7 @@ export default function Time() {
     // Ensure this runs only on the client side
     const getISTTime = () => {
       const now = new Date();
-      const offset = 5.5 * 60 * 60 * 1000; // IST is UTC+5:30
-      const istTime = new Date(now.getTime() + offset);
-      return istTime.toLocaleString("en-IN", {
+      return now.toLocaleString("en-IN", {
         timeZone: "Asia/Kolkata",
         hour12: true,
         hour: "numeric",
