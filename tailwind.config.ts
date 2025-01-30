@@ -11,6 +11,8 @@ export default {
       fontFamily: {
         arigato: ["var(--font-arigato)"],
         sans: ["var(--font-gabarito)"],
+        inter: ["var(--font-inter)"],
+        ubuntu: ["var(--font-ubuntu)"],
       },
     },
   },

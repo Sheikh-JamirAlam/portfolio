@@ -1,3 +1,4 @@
+import Image from "next/image";
 import RevealText from "./components/RevealText";
 import SocialsContainer from "./components/SocialsContainer";
 import PicContainer from "./components/PicContainer";
@@ -8,6 +9,9 @@ import CipelaContainer from "./components/CipelaContainer";
 import OPodsContainer from "./components/OPodsContainer";
 import MediSearch from "./components/MediSearch";
 import Healthtech from "./components/Healthtech";
+import EndingTextBubble from "./components/EndingTextBubble";
+import CompanionEndingAnimation from "./components/CompanionEndingAnimation";
+import Time from "./components/Time";
 
 export default function Home() {
   return (
@@ -60,7 +64,37 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer></footer>
+      <footer className="mb-6 mx-6 relative flex flex-row-reverse gap-6">
+        <div className="w-[60%] py-8 flex items-center border-2 border-foreground">
+          <div className="w-fit m-4 p-2 absolute bg-white border-2 border-foreground">
+            <p className="w-[8rem] text-center">Need A Website redesign?</p>
+          </div>
+          <h1 className="w-full text-5xl text-center">alamjamir15@gmail.com</h1>
+          <div className="absolute inset-0 flex items-end justify-end">
+            <p className="mx-3 mb-1">
+              <span className="font-inter">©</span> 2025 Sheikh Jamir Alam
+            </p>
+          </div>
+        </div>
+        <div className="w-[40%] flex gap-6 border-2 border-foreground overflow-hidden">
+          <CompanionEndingAnimation />
+          <EndingTextBubble />
+          <div className="h-fit mx-auto my-auto flex border-2 border-foreground">
+            <div className="flex border-r-2 border-foreground">
+              <Image className="w-16 h-16 mx-4 my-auto" src="/images/earth.png" width={512} height={512} alt="Earth png" />
+            </div>
+            <div className="flex flex-col">
+              <h1 className="p-2 text-lg">Working Globally</h1>
+              <p className="w-[10rem] p-2 border-t-2 border-foreground leading-none">
+                <span className="font-bold text-sm">LOCAL TIME</span>
+                <br />
+                <Time />
+                <span className="font-ubuntu">, IST</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
