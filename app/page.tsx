@@ -12,6 +12,8 @@ import Healthtech from "./components/Healthtech";
 import EndingTextBubble from "./components/EndingTextBubble";
 import CompanionEndingAnimation from "./components/CompanionEndingAnimation";
 import Time from "./components/Time";
+import AnimatedCursor from "./components/AnimatedCursor";
+import Email from "./components/Email";
 
 export default function Home() {
   return (
@@ -23,6 +25,7 @@ export default function Home() {
         </filter>
       </svg>
       <main>
+        <AnimatedCursor />
         <section className="h-dvh flex flex-col gap-6">
           <div className="absolute filter-[url('#noiseFilter')]" />
           <OpenAnimation />
@@ -69,7 +72,7 @@ export default function Home() {
           <div className="w-fit m-4 p-2 absolute bg-white border-2 border-foreground">
             <p className="w-[8rem] text-center">Need A Website redesign?</p>
           </div>
-          <h1 className="w-full text-5xl text-center">alamjamir15@gmail.com</h1>
+          <Email />
           <div className="absolute inset-0 flex items-end justify-end">
             <p className="mx-3 mb-1">
               <span className="font-inter">©</span> 2025 Sheikh Jamir Alam
