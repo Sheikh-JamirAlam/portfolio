@@ -26,7 +26,7 @@ export default function Home() {
       </svg>
       <main>
         <AnimatedCursor />
-        <section className="h-dvh flex flex-col gap-6">
+        <section className="h-svh flex flex-col gap-6">
           <div className="absolute filter-[url('#noiseFilter')]" />
           <OpenAnimation />
           <div className="h-[50%] mx-6 mt-6 border-2 border-foreground">

@@ -6,7 +6,6 @@ export default function Time() {
   const [currentTime, setCurrentTime] = useState<string>("");
 
   useEffect(() => {
-    // Ensure this runs only on the client side
     const getISTTime = () => {
       const now = new Date();
       return now.toLocaleString("en-IN", {

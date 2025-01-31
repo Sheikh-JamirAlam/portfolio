@@ -20,7 +20,7 @@ export default function AnimatedCursor() {
 
   return (
     <motion.div
-      className="fixed z-50 flex items-end pointer-events-none"
+      className="fixed z-50 invisible md:visible hidden md:flex items-end pointer-events-none"
       initial={{ opacity: 0, scale: 0 }}
       animate={{
         opacity: isHovered !== "none" ? 1 : 0,
