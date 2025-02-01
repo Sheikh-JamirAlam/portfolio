@@ -25,7 +25,7 @@ export default function Healthtech() {
   }, [isHovered]);
 
   return (
-    <motion.div className="w-[50%] relative border-2 border-foreground overflow-hidden" onMouseEnter={() => setIsHovered("healthtech")} onMouseLeave={() => setIsHovered("none")}>
+    <motion.div className="w-full lg:w-[50%] relative border-2 border-foreground overflow-hidden" onMouseEnter={() => setIsHovered("healthtech")} onMouseLeave={() => setIsHovered("none")}>
       <Link target="_blank" href="https://healthtech-web-psi.vercel.app">
         <Image
           className={`select-none relative z-20 transition-all duration-300 ${isHovered === "healthtech" ? "opacity-0 saturate-100" : "opacity-100 saturate-0"}`}
@@ -37,7 +37,7 @@ export default function Healthtech() {
         <video ref={videoRef} className="absolute inset-0 z-10" src="/videos/healthtech.mp4" autoPlay loop muted preload="none" aria-label="A video of showcasing OPods" />
         <div className="flex justify-end items-end absolute inset-0 z-30">
           <div className="w-fit h-fit mb-12 m-4 p-2 relative bg-white border-2 border-foreground cursor-pointer">
-            <p className="w-[9rem] text-center">
+            <p className="w-[7rem] sm:w-[9rem] text-xs sm:text-base text-center">
               This was a personal redesign of the website <span className="font-semibold">Healthtech</span>.
             </p>
           </div>

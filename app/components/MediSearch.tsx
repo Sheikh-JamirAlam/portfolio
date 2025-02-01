@@ -25,7 +25,7 @@ export default function MediSearch() {
   }, [isHovered]);
 
   return (
-    <motion.div className="w-[50%] relative border-2 border-foreground overflow-hidden" onMouseEnter={() => setIsHovered("medisearch")} onMouseLeave={() => setIsHovered("none")}>
+    <motion.div className="w-full lg:w-[50%] relative border-2 border-foreground overflow-hidden" onMouseEnter={() => setIsHovered("medisearch")} onMouseLeave={() => setIsHovered("none")}>
       <Link target="_blank" href="https://medisearch-web.vercel.app">
         <Image
           className={`select-none relative z-20 transition-all duration-300 ${isHovered === "medisearch" ? "opacity-0 saturate-100" : "opacity-100 saturate-0"}`}
@@ -37,7 +37,7 @@ export default function MediSearch() {
         <video ref={videoRef} className="absolute inset-0 z-10" src="/videos/medisearch.mp4" autoPlay loop muted preload="none" aria-label="A video of showcasing OPods" />
         <div className="absolute inset-0 z-30">
           <div className="w-fit h-fit mt-12 m-4 p-2 relative bg-white border-2 border-foreground cursor-pointer">
-            <p className="w-[12.5rem] text-center">
+            <p className="w-[8rem] sm:w-[12.5rem] text-xs sm:text-base text-center">
               Lastly this is a Fullstack project, redesign of <span className="font-semibold">Medisearch</span> website with authentication functionality.
             </p>
           </div>

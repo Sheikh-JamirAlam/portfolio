@@ -9,7 +9,7 @@ export default function SocialsContainer() {
   const [isHovered, setIsHovered] = useState<string>("none");
 
   return (
-    <div className="mx-auto my-auto grid grid-cols-2 gap-6 text-7xl">
+    <div className="mx-auto my-auto grid grid-cols-2 gap-6 text-6xl xl:text-7xl">
       <Link className="relative z-10" target="_blank" href="mailto:alamjamir15@gmail.com">
         <div className="flex justify-center cursor-pointer">
           <motion.div initial={{ rotate: 10, y: 0 }} whileHover={{ rotate: 0, y: -10 }} onHoverStart={() => setIsHovered("email")} onHoverEnd={() => setIsHovered("none")}>

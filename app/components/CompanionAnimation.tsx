@@ -8,7 +8,7 @@ export default function CompanionAnimation() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div ref={ref} className="w-14 h-20 mt-auto mb-6 relative">
+    <div ref={ref} className="w-10 lg:w-14 h-14 lg:h-20 mt-auto 2xl:mb-6 relative">
       <motion.img
         className="w-24 scale-150 absolute rotate-[20deg] -translate-x-1"
         initial={{ x: "-5rem", rotate: "20deg", scale: 1.5, opacity: 0 }}

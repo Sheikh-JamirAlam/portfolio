@@ -26,72 +26,79 @@ export default function Home() {
       </svg>
       <main>
         <AnimatedCursor />
-        <section className="h-svh flex flex-col gap-6">
+        <section className="h-svh max-[480px]:max-h-[1000px] max-[480px]:min-h-[550px] max-[734px]:max-h-[850px] max-[734px]:min-h-[600px] max-[1068px]:max-h-[850px] max-[1068px]:min-h-[700px] flex flex-col gap-6">
           <div className="absolute filter-[url('#noiseFilter')]" />
           <OpenAnimation />
-          <div className="h-[50%] mx-6 mt-6 relative flex items-center justify-center border-2 border-foreground">
-            <div className="absolute inset-0">
-              <div className="w-[10.5rem] m-4 p-2 absolute bg-white border-2 border-foreground">
-                <p className="text-center leading-[1.25]">
-                  Hi there! This is <span className="font-semibold">Sheikh</span>... I am a <br /> Full Stack Developer &amp; Web Designer.
-                </p>
-              </div>
+          <div className="h-[40%] lg:h-[50%] mx-6 mt-6 flex flex-col border-2 border-foreground">
+            <div className="w-[14rem] sm:w-[10.5rem] md:w-[16rem] lg:w-[10.5rem] m-4 p-2 bg-white border-2 border-foreground">
+              <p className="text-xs sm:text-sm lg:text-base text-center leading-[1.25]">
+                Hi there! This is <span className="font-semibold">Sheikh</span>... I am a <br /> Full Stack Developer &amp; Web Designer.
+              </p>
             </div>
-            <h1 className="text-[8.35vw] 2xl:text-9xl leading-none text-center font-arigato">
-              <RevealText text="Sheikh&nbsp;Jamir&nbsp;Alam" />
-            </h1>
+            <div className="my-auto 2xl:mt-[4%]">
+              <h1 className="text-[7.5vw] sm:text-[8.35vw] 2xl:text-9xl leading-none text-center font-arigato">
+                <RevealText text="Sheikh&nbsp;Jamir&nbsp;Alam" />
+              </h1>
+            </div>
           </div>
-          <div className="h-[50%] mx-6 mb-6 flex flex-row-reverse gap-6">
-            <div className="w-[50%] flex flex-row-reverse justify-between border-2 border-foreground bg-cover bg-center" style={{ backgroundImage: "url('images/map.png')" }}>
-              <div className="w-36 h-fit m-4 p-2 bg-white border-2 border-foreground">
-                <p className="text-center leading-[1.25]">And here is my city of Joy...</p>
+          <div className="h-[60%] lg:h-[50%] mx-6 mb-6 grid grid-cols-5 sm:grid-cols-2 grid-rows-7 lg:flex lg:flex-row-reverse gap-6">
+            <div
+              className="lg:w-[50%] row-span-4 col-span-5 sm:col-span-2 flex flex-row-reverse justify-between border-2 border-foreground bg-cover bg-center"
+              style={{ backgroundImage: "url('images/map.png')" }}
+            >
+              <div className="w-28 sm:w-36 h-fit m-4 p-2 bg-white border-2 border-foreground">
+                <p className="text-xs sm:text-base text-center leading-[1.25]">And here is my city of Joy...</p>
               </div>
-              <div className="w-36 mt-auto m-4 p-2 bg-white border-2 border-foreground">
-                <p className="text-center leading-[1.25]">...best place to get Biriyani. Thank me later!</p>
+              <div className="w-28 sm:w-36 mt-auto m-4 p-2 bg-white border-2 border-foreground">
+                <p className="text-xs sm:text-base text-center leading-[1.25]">...best place to get Biriyani. Thank me later!</p>
               </div>
             </div>
             <PicContainer />
-            <div className="w-[25%] flex border-2 border-foreground overflow-hidden">
-              <CompanionAnimation />
-              <SocialsTextBubble />
+            <div className="lg:w-[25%] col-span-3 sm:col-span-1 row-span-3 flex flex-row lg:flex-col-reverse 2xl:flex-row border-2 border-foreground overflow-hidden">
+              <div className="flex">
+                <CompanionAnimation />
+                <SocialsTextBubble />
+              </div>
               <SocialsContainer />
             </div>
           </div>
         </section>
         <section className="mb-6 mx-6 flex flex-col gap-6">
-          <div className="flex gap-6">
+          <div className="flex flex-col-reverse lg:flex-row gap-6">
             <CipelaContainer />
             <OPodsContainer />
           </div>
-          <div className="flex gap-6">
+          <div className="flex flex-col-reverse lg:flex-row gap-6">
             <MediSearch />
             <Healthtech />
           </div>
         </section>
       </main>
       <footer className="mb-6 mx-6 relative flex flex-row-reverse gap-6">
-        <div className="w-[60%] py-8 flex items-center border-2 border-foreground">
-          <div className="w-fit m-4 p-2 absolute bg-white border-2 border-foreground">
-            <p className="w-[8rem] text-center">Need A Website redesign?</p>
+        <div className="w-[50%] lg:w-[55%] xl:w-[60%] py-8 flex flex-col lg:flex-row items-center border-2 border-foreground">
+          <div className="w-fit lg:m-2 xl:m-4 p-2 2xl:absolute bg-white border-2 border-foreground">
+            <p className="w-[6rem] sm:w-[8rem] text-xs sm:text-base text-center">Need A Website Redesign?</p>
           </div>
           <Email />
           <div className="absolute inset-0 flex items-end justify-end">
-            <p className="mx-3 mb-1">
+            <p className="mx-3 mb-1 text-xs sm:text-base">
               <span className="font-inter">©</span> 2025 Sheikh Jamir Alam
             </p>
           </div>
         </div>
-        <div className="w-[40%] flex gap-6 border-2 border-foreground overflow-hidden">
-          <CompanionEndingAnimation />
-          <EndingTextBubble />
-          <div className="h-fit mx-auto my-auto flex border-2 border-foreground">
-            <div className="flex border-r-2 border-foreground">
-              <Image className="w-16 h-16 mx-4 my-auto" src="/images/earth.png" width={512} height={512} alt="Earth png" />
+        <div className="w-[50%] lg:w-[45%] xl:w-[40%] flex flex-col-reverse lg:flex-row lg:gap-6 border-2 border-foreground overflow-hidden">
+          <div className="flex gap-2 2xl:gap-6">
+            <CompanionEndingAnimation />
+            <EndingTextBubble />
+          </div>
+          <div className="h-fit mx-auto mt-4 xl:mt-0 flex lg:flex-col xl:flex-row border-2 border-foreground">
+            <div className="w-full flex justify-center border-r-2 lg:border-r-0 xl:border-r-2 border-foreground">
+              <Image className="w-10 h-10 sm:w-16 sm:h-16 mx-4 my-auto" src="/images/earth.png" width={512} height={512} alt="Earth png" />
             </div>
-            <div className="flex flex-col">
-              <h1 className="p-2 text-lg">Working Globally</h1>
-              <p className="w-[10rem] p-2 border-t-2 border-foreground leading-none">
-                <span className="font-bold text-sm">LOCAL TIME</span>
+            <div className="flex flex-col text-xs xs:text-base">
+              <h1 className="p-2 text-sm xs:text-lg">Working Globally</h1>
+              <p className="w-[10rem] min-w-[7.6rem] p-2 border-t-2 border-foreground leading-none">
+                <span className="font-bold text-xs xs:text-sm">LOCAL TIME</span>
                 <br />
                 <Time />
                 <span className="font-ubuntu">, IST</span>
