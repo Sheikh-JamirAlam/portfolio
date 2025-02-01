@@ -8,10 +8,10 @@ export default function PicContainer() {
 
   return (
     <motion.div id="pic-container" className="w-[25%] border-2 border-foreground relative flex flex-row-reverse justify-between" onHoverStart={() => setIsHovered(true)}>
-      <div className="w-24 h-fit m-6 p-2 relative bg-white border-2 border-foreground">
+      <div className="w-24 h-fit mt-auto 2xl:mt-6 m-6 p-2 relative bg-white border-2 border-foreground">
         <p className="text-center leading-[1.25]">This is me. With my nerd glasses!</p>
       </div>
-      <div className="w-28 m-10 h-fit relative">
+      <div className="w-28 ml-[2%] 2xl:ml-10 m-10 h-fit relative">
         <motion.img
           className="w-full absolute"
           initial={{ opacity: 0, scale: 0, x: 100 }}

@@ -29,13 +29,15 @@ export default function Home() {
         <section className="h-svh flex flex-col gap-6">
           <div className="absolute filter-[url('#noiseFilter')]" />
           <OpenAnimation />
-          <div className="h-[50%] mx-6 mt-6 border-2 border-foreground">
-            <div className="w-[10.5rem] m-4 p-2 bg-white border-2 border-foreground">
-              <p className="text-center leading-[1.25]">
-                Hi there! This is <span className="font-semibold">Sheikh</span>... I am a <br /> Full Stack Developer &amp; Web Designer.
-              </p>
+          <div className="h-[50%] mx-6 mt-6 relative flex items-center justify-center border-2 border-foreground">
+            <div className="absolute inset-0">
+              <div className="w-[10.5rem] m-4 p-2 absolute bg-white border-2 border-foreground">
+                <p className="text-center leading-[1.25]">
+                  Hi there! This is <span className="font-semibold">Sheikh</span>... I am a <br /> Full Stack Developer &amp; Web Designer.
+                </p>
+              </div>
             </div>
-            <h1 className="mt-12 text-9xl text-center font-arigato">
+            <h1 className="text-[8.35vw] 2xl:text-9xl leading-none text-center font-arigato">
               <RevealText text="Sheikh&nbsp;Jamir&nbsp;Alam" />
             </h1>
           </div>
