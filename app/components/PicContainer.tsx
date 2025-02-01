@@ -1,22 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "motion/react";
 
 export default function PicContainer() {
   const [isHovered, setIsHovered] = useState<boolean>(false);
-  const [viewportWidth, setViewportWidth] = useState(0);
-
-  useEffect(() => {
-    const calculateViewport = () => {
-      setViewportWidth(window.innerWidth);
-    };
-    calculateViewport();
-    window.addEventListener("resize", calculateViewport);
-    return () => {
-      window.removeEventListener("resize", calculateViewport);
-    };
-  }, []);
 
   return (
     <motion.div
