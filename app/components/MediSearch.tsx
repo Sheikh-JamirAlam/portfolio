@@ -36,8 +36,8 @@ export default function MediSearch() {
         />
         <video ref={videoRef} className="absolute inset-0 z-10" src="/videos/medisearch.mp4" autoPlay loop muted preload="none" aria-label="A video of showcasing OPods" />
         <div className="absolute inset-0 z-30">
-          <div className="w-fit h-fit sm:mt-12 m-1 sm:m-4 p-2 relative bg-white border-2 border-foreground cursor-pointer">
-            <p className="w-[8rem] sm:w-[12.5rem] text-xs sm:text-base text-center">
+          <div className="w-fit h-fit sm:mt-12 m-1 sm:m-4 p-1 sm:p-2 relative bg-white border-2 border-foreground cursor-pointer">
+            <p className="w-[5rem] xss:w-[7rem] sm:w-[12.5rem] text-xs sm:text-base text-center">
               Lastly this is a Fullstack project, redesign of <span className="font-semibold">Medisearch</span> website with authentication functionality.
             </p>
           </div>

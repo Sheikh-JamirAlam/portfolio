@@ -91,7 +91,7 @@ export default function Home() {
             <CompanionEndingAnimation />
             <EndingTextBubble />
           </div>
-          <div className="h-fit mx-auto mt-4 xl:mt-0 flex lg:flex-col xl:flex-row border-2 border-foreground">
+          <div className="h-fit mx-auto mt-4 xl:my-auto flex lg:flex-col xl:flex-row border-2 border-foreground">
             <div className="w-full flex justify-center border-r-2 lg:border-r-0 xl:border-r-2 border-foreground">
               <Image className="w-10 h-10 sm:w-16 sm:h-16 mx-4 my-auto" src="/images/earth.png" width={512} height={512} alt="Earth png" />
             </div>

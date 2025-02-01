@@ -36,7 +36,7 @@ export default function CipelaContainer() {
         />
         <video ref={videoRef} className="absolute inset-0 z-10" src="/videos/cipela.mp4" autoPlay loop muted preload="none" aria-label="A video of showcasing OPods" />
         <div className="absolute z-30 flex inset-0">
-          <div className="w-fit h-fit mt-auto sm:mt-12 m-1 sm:m-4 p-2 relative bg-white border-2 border-foreground cursor-pointer">
+          <div className="w-fit h-fit mt-auto sm:mt-16 m-1 sm:m-4 p-1 sm:p-2 relative bg-white border-2 border-foreground cursor-pointer">
             <p className="w-[8rem] text-xs sm:text-base text-center">
               Another portfolio project is <span className="font-semibold">Cipela</span>, which is a shoe selling website inspired by Nike.
             </p>

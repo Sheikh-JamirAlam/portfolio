@@ -19,7 +19,7 @@ export default function Email() {
   return (
     <div
       ref={scope}
-      className="w-full h-full lg:h-auto mt-4 xs:mt-0 flex justify-center items-center text-[5vw] xs:text-[3.14vw] 2xl:text-5xl text-center lg:inline-block leading-[1.1] overflow-hidden"
+      className="w-full h-full lg:h-auto mt-4 xs:mt-0 flex justify-center items-center text-[5vw] xs:text-[3.14vw] 2xl:text-5xl 2xl:leading-[1.1] text-center lg:inline-block leading-[1.1] overflow-hidden"
     >
       <Link onMouseEnter={() => setIsHovered("email")} onMouseLeave={() => setIsHovered("none")} className="relative z-10" target="_blank" href="mailto:alamjamir15@gmail.com">
         {"alamjamir15@gmail.com".split("").map((char, i) => (

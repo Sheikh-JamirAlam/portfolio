@@ -35,12 +35,12 @@ export default function OPodsContainer() {
           alt="OPods - Airpods website"
         />
         <video ref={videoRef} className="absolute inset-0 z-10" src="/videos/opods.mp4" autoPlay loop muted preload="none" aria-label="A video of showcasing OPods" />
-        <div className="flex flex-row-reverse justify-between absolute inset-0 z-30">
-          <div className="w-fit h-fit sm:mt-12 m-1 sm:m-4 p-2 relative bg-white border-2 border-foreground cursor-pointer">
+        <div className="h-full flex flex-row-reverse justify-between absolute inset-0 z-30">
+          <div className="w-fit h-fit sm:mt-12 m-1 sm:m-4 p-1 sm:p-2 relative bg-white border-2 border-foreground cursor-pointer">
             <p className="w-[7rem] sm:w-[9rem] text-xs sm:text-base text-center">Let&apos;s me show you some of my works...</p>
           </div>
-          <div className="w-fit h-fit mt-auto sm:mb-[20%] m-1 sm:m-4 p-2 relative bg-white border-2 border-foreground cursor-pointer">
-            <p className="w-[10rem] sm:w-[13rem] text-xs sm:text-base text-center">
+          <div className="w-fit h-fit mt-auto sm:mt-auto sm:mb-[20%] m-1 sm:m-4 p-1 sm:p-2 relative bg-white border-2 border-foreground cursor-pointer">
+            <p className="w-[7rem] xxs:w-[10rem] sm:w-[13rem] text-xs sm:text-base text-center">
               <span className="font-semibold">OPods</span> is a portfolio project which is a product showcase website inspired by Apple.
             </p>
           </div>
