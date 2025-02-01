@@ -12,7 +12,7 @@ export default function PicContainer() {
       className="lg:w-[25%] col-span-2 sm:col-span-1 row-span-3 border-2 border-foreground relative flex flex-row-reverse justify-between"
       onHoverStart={() => setIsHovered(true)}
     >
-      <div className="w-32 sm:w-24 h-fit mt-auto 2xl:mt-6 m-6 p-2 relative bg-white border-2 border-foreground">
+      <div className="w-32 sm:w-24 h-fit mt-auto 2xl:mt-6 m-1 sm:m-6 p-2 relative bg-white border-2 border-foreground">
         <p className="text-xs sm:text-base text-center leading-[1.25]">This is me. With my nerd glasses!</p>
       </div>
       <div className="w-2 md:w-28 ml-[2%] 2xl:ml-10 m-10 h-fit relative">

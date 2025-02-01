@@ -36,7 +36,7 @@ export default function Healthtech() {
         />
         <video ref={videoRef} className="absolute inset-0 z-10" src="/videos/healthtech.mp4" autoPlay loop muted preload="none" aria-label="A video of showcasing OPods" />
         <div className="flex justify-end items-end absolute inset-0 z-30">
-          <div className="w-fit h-fit mb-12 m-4 p-2 relative bg-white border-2 border-foreground cursor-pointer">
+          <div className="w-fit h-fit sm:mb-12 m-1 sm:m-4 p-2 relative bg-white border-2 border-foreground cursor-pointer">
             <p className="w-[7rem] sm:w-[9rem] text-xs sm:text-base text-center">
               This was a personal redesign of the website <span className="font-semibold">Healthtech</span>.
             </p>

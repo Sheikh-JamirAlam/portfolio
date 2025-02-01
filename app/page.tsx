@@ -30,7 +30,7 @@ export default function Home() {
           <div className="absolute filter-[url('#noiseFilter')]" />
           <OpenAnimation />
           <div className="h-[40%] lg:h-[50%] mx-6 mt-6 flex flex-col border-2 border-foreground">
-            <div className="w-[14rem] sm:w-[10.5rem] md:w-[16rem] lg:w-[10.5rem] m-4 p-2 bg-white border-2 border-foreground">
+            <div className="w-[8rem] xs:w-[14rem] sm:w-[10.5rem] md:w-[16rem] lg:w-[10.5rem] m-4 p-2 bg-white border-2 border-foreground">
               <p className="text-xs sm:text-sm lg:text-base text-center leading-[1.25]">
                 Hi there! This is <span className="font-semibold">Sheikh</span>... I am a <br /> Full Stack Developer &amp; Web Designer.
               </p>
@@ -74,9 +74,9 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="mb-6 mx-6 relative flex flex-row-reverse gap-6">
-        <div className="w-[50%] lg:w-[55%] xl:w-[60%] py-8 flex flex-col lg:flex-row items-center border-2 border-foreground">
-          <div className="w-fit lg:m-2 xl:m-4 p-2 2xl:absolute bg-white border-2 border-foreground">
+      <footer className="mb-6 mx-6 relative flex flex-col-reverse xs:flex-row-reverse gap-6">
+        <div className="xs:w-[50%] lg:w-[55%] xl:w-[60%] xs:py-8 pb-8 flex flex-col lg:flex-row xs:items-center border-2 border-foreground">
+          <div className="w-fit m-1 xs:m-0 lg:m-2 xl:m-4 p-2 2xl:absolute bg-white border-2 border-foreground">
             <p className="w-[6rem] sm:w-[8rem] text-xs sm:text-base text-center">Need A Website Redesign?</p>
           </div>
           <Email />
@@ -86,7 +86,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="w-[50%] lg:w-[45%] xl:w-[40%] flex flex-col-reverse lg:flex-row lg:gap-6 border-2 border-foreground overflow-hidden">
+        <div className="xs:w-[50%] lg:w-[45%] xl:w-[40%] flex flex-col-reverse lg:flex-row lg:gap-6 border-2 border-foreground overflow-hidden">
           <div className="flex gap-2 2xl:gap-6">
             <CompanionEndingAnimation />
             <EndingTextBubble />
@@ -97,7 +97,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col text-xs xs:text-base">
               <h1 className="p-2 text-sm xs:text-lg">Working Globally</h1>
-              <p className="w-[10rem] min-w-[7.6rem] p-2 border-t-2 border-foreground leading-none">
+              <p className="w-[7.6rem] sm:w-[10rem] p-2 border-t-2 border-foreground leading-none">
                 <span className="font-bold text-xs xs:text-sm">LOCAL TIME</span>
                 <br />
                 <Time />
