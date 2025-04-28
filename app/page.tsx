@@ -5,6 +5,7 @@ import PicContainer from "./components/PicContainer";
 import OpenAnimation from "./components/OpenAnimation";
 import CompanionAnimation from "./components/CompanionAnimation";
 import SocialsTextBubble from "./components/SocialsTextBubble";
+import VetSyncContainer from "./components/VetSyncContainer";
 import CipelaContainer from "./components/CipelaContainer";
 import OPodsContainer from "./components/OPodsContainer";
 import MediSearch from "./components/MediSearch";
@@ -14,6 +15,8 @@ import CompanionEndingAnimation from "./components/CompanionEndingAnimation";
 import Time from "./components/Time";
 import AnimatedCursor from "./components/AnimatedCursor";
 import Email from "./components/Email";
+import CompanionVetsyncAnimation from "./components/CompanionVetsyncAnimation";
+import VetsyncBubble from "./components/VetsyncBubble";
 
 export default function Home() {
   return (
@@ -60,6 +63,17 @@ export default function Home() {
                 <SocialsTextBubble />
               </div>
               <SocialsContainer />
+            </div>
+          </div>
+        </section>
+        <section className="mb-6 mx-6 flex flex-col gap-6">
+          <div className="flex flex-row gap-6">
+            <VetSyncContainer />
+            <div className="w-[40%] border-2 border-foreground overflow-hidden">
+              <div className="w-full flex flex-row-reverse">
+                <CompanionVetsyncAnimation />
+                <VetsyncBubble />
+              </div>
             </div>
           </div>
         </section>

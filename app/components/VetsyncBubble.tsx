@@ -1,0 +1,53 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { useInView, motion } from "motion/react";
+
+export default function VetsyncBubble() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const [viewportWidth, setViewportWidth] = useState(0);
+
+  useEffect(() => {
+    const calculateViewport = () => {
+      setViewportWidth(window.innerWidth);
+    };
+    calculateViewport();
+    window.addEventListener("resize", calculateViewport);
+    return () => {
+      window.removeEventListener("resize", calculateViewport);
+    };
+  }, []);
+
+  return (
+    <div ref={ref} className="w-24 xxs:w-[35rem] h-[9rem] xxs:h-[11rem] sm:h-[12rem] xl:h-[15rem] 2xl:h-[22rem] mt-auto relative">
+      <motion.img
+        className="w-[35rem] scale-100 absolute"
+        initial={{ x: "10rem", scale: 0, opacity: 0 }}
+        animate={isInView && { x: viewportWidth > 1280 ? "-1.5rem" : "-20px", scale: viewportWidth > 1280 ? 1 : viewportWidth >= 400 ? 1 : 1.3, opacity: 1 }}
+        transition={{ delay: 0.7 }}
+        src="/images/bubble-vetsync.png"
+        width={500}
+        height={500}
+        alt="Message bubble"
+      />
+      <motion.p
+        className="w-[31.5rem] mx-auto text-center relative"
+        initial={{ x: "10rem", y: 0, scale: 0, opacity: 0 }}
+        animate={
+          isInView && {
+            x: viewportWidth > 1280 ? "-1.5rem" : viewportWidth >= 400 ? "-20px" : "-29px",
+            y: viewportWidth >= 400 ? "1rem" : "-25px",
+            scale: viewportWidth > 1280 ? 1 : viewportWidth >= 400 ? 0.7 : 0.6,
+            opacity: 1,
+          }
+        }
+        transition={{ delay: 0.7 }}
+      >
+        Let me show you <span className="font-semibold">VetSync</span>. This is a project Sheikh worked on for a client. His client, Matthew said &quot;<span className="font-semibold">You&apos;re very responsive, which I really appreciate and is one of the reasons you&apos;ve been great to work with. I think you have great technical skills, are quick to respond, get things done in a timely manner and of quality</span>&quot;.
+        <br />
+        Quite impressive, right? So, VetSync is a smart veterinary scheduling and communication platform that enables 24/7 online booking, automates reminders, manages payments, and helps clinics boost reviews and customer retention. Pretty neat stuff, huh?
+      </motion.p>
+    </div>
+  );
+}
