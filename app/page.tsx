@@ -67,10 +67,10 @@ export default function Home() {
           </div>
         </section>
         <section className="mb-6 mx-6 flex flex-col gap-6">
-          <div className="flex flex-row gap-6">
+          <div className="flex flex-col lg:flex-row gap-6">
             <VetSyncContainer />
-            <div className="w-[40%] border-2 border-foreground overflow-hidden">
-              <div className="w-full flex flex-row-reverse">
+            <div className="lg:w-[40%] border-2 border-foreground overflow-hidden">
+              <div className="w-full h-full flex flex-row-reverse">
                 <CompanionVetsyncAnimation />
                 <VetsyncBubble />
               </div>

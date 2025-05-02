@@ -20,11 +20,11 @@ export default function VetsyncBubble() {
   }, []);
 
   return (
-    <div ref={ref} className="w-24 xxs:w-[35rem] h-[9rem] xxs:h-[11rem] sm:h-[12rem] xl:h-[15rem] 2xl:h-[22rem] mt-auto relative">
+    <div ref={ref} className="mb-20 xs:mb-24 xl:mb-32 2xl:mb-40 mt-4 lg:mt-auto relative flex justify-center">
       <motion.img
-        className="w-[35rem] scale-100 absolute"
-        initial={{ x: "10rem", scale: 0, opacity: 0 }}
-        animate={isInView && { x: viewportWidth > 1280 ? "-1.5rem" : "-20px", scale: viewportWidth > 1280 ? 1 : viewportWidth >= 400 ? 1 : 1.3, opacity: 1 }}
+        className="w-[68vw] sm:w-[54vw] lg:w-[33vw] 2xl:w-[34.5rem] max-w-[34.5rem] scale-100 absolute"
+        initial={{ x: "10rem", scale: 1, opacity: 0 }}
+        animate={isInView && { x: viewportWidth > 1280 ? 0 : 0, scale: 1, opacity: 1 }}
         transition={{ delay: 0.7 }}
         src="/images/bubble-vetsync.png"
         width={500}
@@ -32,13 +32,15 @@ export default function VetsyncBubble() {
         alt="Message bubble"
       />
       <motion.p
-        className="w-[31.5rem] mx-auto text-center relative"
+        className="w-[61.5vw] xs:w-[59vw] sm:w-[48vw] lg:w-[31vw] 2xl:w-[31rem] max-w-[31rem] mx-[5vw] sm:mx-[1.5vw] text-center relative"
+        style={{ fontSize: viewportWidth >= 1536 ? "16px" : viewportWidth >= 1024 ? "0.93vw" : viewportWidth >= 640 ? "1.565vw" : viewportWidth >= 500 ? "1.92vw" : "2vw" }}
         initial={{ x: "10rem", y: 0, scale: 0, opacity: 0 }}
         animate={
           isInView && {
-            x: viewportWidth > 1280 ? "-1.5rem" : viewportWidth >= 400 ? "-20px" : "-29px",
-            y: viewportWidth >= 400 ? "1rem" : "-25px",
-            scale: viewportWidth > 1280 ? 1 : viewportWidth >= 400 ? 0.7 : 0.6,
+            x: 0,
+            y: viewportWidth >= 1280 ? "1rem" : viewportWidth >= 1280 ? "0.7rem" : "0.4rem",
+            scale: 1,
+            // scale: viewportWidth >= 1563 ? "90%" : viewportWidth > 1280 ? 0.9 : viewportWidth >= 400 ? 0.7 : 0.6,
             opacity: 1,
           }
         }

@@ -28,7 +28,7 @@ export default function Healthtech() {
     <motion.div className="w-full lg:w-[50%] relative border-2 border-foreground overflow-hidden" onMouseEnter={() => setIsHovered("healthtech")} onMouseLeave={() => setIsHovered("none")}>
       <Link target="_blank" href="https://healthtech-web-psi.vercel.app">
         <Image
-          className={`select-none relative z-20 transition-all duration-300 ${isHovered === "healthtech" ? "opacity-0 saturate-100" : "opacity-100 saturate-0"}`}
+          className={`w-full select-none relative z-20 transition-all duration-300 ${isHovered === "healthtech" ? "opacity-0 saturate-100" : "opacity-100 saturate-0"}`}
           src="/images/healthtech.png"
           width={1000}
           height={1000}

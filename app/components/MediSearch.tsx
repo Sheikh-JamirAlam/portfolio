@@ -28,7 +28,7 @@ export default function MediSearch() {
     <motion.div className="w-full lg:w-[50%] relative border-2 border-foreground overflow-hidden" onMouseEnter={() => setIsHovered("medisearch")} onMouseLeave={() => setIsHovered("none")}>
       <Link target="_blank" href="https://medisearch-web.vercel.app">
         <Image
-          className={`select-none relative z-20 transition-all duration-300 ${isHovered === "medisearch" ? "opacity-0 saturate-100" : "opacity-100 saturate-0"}`}
+          className={`w-full select-none relative z-20 transition-all duration-300 ${isHovered === "medisearch" ? "opacity-0 saturate-100" : "opacity-100 saturate-0"}`}
           src="/images/medisearch.png"
           width={1000}
           height={1000}
